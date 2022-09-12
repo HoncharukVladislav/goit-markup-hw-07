@@ -1,0 +1,28 @@
+.occupation__block {
+    display: block;
+    position: relative;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.occupation__img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.occupation- {
+padding-top: 0px;
+padding-bottom: 94px;
+}
+
+.occupation__list {
+    display: flex;
+    gap: 30px;
+}
+
+.occupation__container {width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;}

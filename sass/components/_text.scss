@@ -1,4 +1,4 @@
-.text {
+.peculiarities__text {
     display: block;
     font-weight: 400;
     font-size: 14px;
@@ -29,7 +29,7 @@
     border-bottom: 1px solid #2196F3;
 }
 
-.text-absolut {
+.occupation__text {
     bottom: 0;
     position: absolute;
     display: flex;
@@ -96,4 +96,8 @@
     letter-spacing: 0.03em;
     color: #ffffff;
     background-color: #2196F3;
+}
+
+.footer-text {
+    color: #FFFFFF;
 }

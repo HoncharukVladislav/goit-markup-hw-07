@@ -23,28 +23,30 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <header class="header-porfolio">
-      <div class="container header-flex">
-        <nav class="main-nav">
-          <a class="header-logo link" href="“#”"
-            ><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <a class="header__logo-web link"  href="“#”">
+            <span class="">Web</span><span class="header__logo-studio">Studio</span></a
           >
-          <ul class="site-nav list">
-            <li>
-           <a class="nav-link link studia " href="">Студия</a>
+          <ul class="site-nav link">
+            <li class="site-nav__items">
+           <a class="site-nav__link header__studia link" href="">Студия</a>
           </li>
-            <li><a class="nav-link link" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="nav-link link" href="">Контакты</a></li>
+            <li class="site-nav__items">
+              <a class="site-nav__link link" href="./portfolio.html">Портфолио</a></li>
+            <li class="site-nav__items">
+              <a class="site-nav__link link" href="">Контакты</a></li>
           </ul>
         </nav>
         <ul class="site-contact list">
-           <li>
-          <a class="contact-link link" href="mailto:info@devstudio.com">
-            <svg class="mail-svg"><use  href="./images/icons.svg#icon-envelope-hover" ></use></svg>info@devstudio.com</a>
+           <li class="site-contact__list">
+          <a class="site-contact__link link" href="mailto:info@devstudio.com">
+            <svg class="header__mail-svg"><use  href="./images/icons.svg#icon-envelope-hover" ></use></svg>info@devstudio.com</a>
           </li>
           <li class="">
-            <a class="contact-link link " href="tel:+380961111111">
-            <svg class="phone-svg"  height="16px" width="10px">
+            <a class="site-contact__link link " href="tel:+380961111111">
+            <svg class="header__phone-svg"  height="16px" width="10px">
               <use href="./images/icons.svg#icon-Vector"></use>
             </svg>+38 096 111 11 11</a>
           </li>
@@ -54,9 +56,9 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button data-modal-open"data-modal-open>Заказать услугу</button>
+        <div class="hero__container">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <button class="hero__button data-modal-open"data-modal-open>Заказать услугу</button>
           
         </div>
       </section>
@@ -66,59 +68,59 @@
           <h2 class="visually-hidden">Особенности</h2>
 
 
-        <ul class="peculiarities-container list">
-          <li class="peculiarities-iteam">
-              <div class="peculiarities-iteam-icon">
+        <ul class="peculiarities">
+          <li class="peculiarities__items">
+              <div class="peculiarities__icon">
               <svg class="" width="70px" height="70px" ><use href="./images/icons.svg#icon-antenna"></use></svg>
               </div>
 
-              <h3 class="h-three-title">Внимание к деталям</h3>
+              <h3 class="peculiarities__title">Внимание к деталям</h3>
               <p>
-                <span class="text"
+                <span class="peculiarities__text"
                   >Идейные соображения, а также начало повседневной работы по формированию
                   позиции.</span
                 >
               </p>
             </li>
             
-            <li class="peculiarities-iteam">
-              <div class="peculiarities-iteam-icon">
+            <li class="peculiarities__items">
+              <div class="peculiarities__icon">
                
                   <svg class="" width="70px" height="70px"><use href="./images/icons.svg#icon-clock"></use></svg>
                
                </div>
-              <h3 class="h-three-title">Пунктуальность</h3>
+              <h3 class="peculiarities__title">Пунктуальность</h3>
               <p>
-                <span class="text"
+                <span class="peculiarities__text"
                   >Задача организации, в особенности же рамки и место обучения кадров влечет за
                   собой.</span>
               </p>
               
             </li>
-            <li class="peculiarities-iteam">
-              <div class="peculiarities-iteam-icon">
+            <li class="peculiarities__items">
+              <div class="peculiarities__icon">
                
                   <svg class="" width="70px" height="70px"><use href="./images/icons.svg#icon-diagram"></use></svg>
                
                 </div>
-              <h3 class="h-three-title">Планирование</h3>
+              <h3 class="peculiarities__title">Планирование</h3>
               <p>
-                <span class="text"
+                <span class="peculiarities__text"
                   >Равным образом консультация с широким активом в значительной степени
                   обуславливает.</span
                 >
               </p>
               
             </li>
-            <li class="peculiarities-iteam">
-              <div class="peculiarities-iteam-icon">
+            <li class="peculiarities__items">
+              <div class="peculiarities__icon">
               
                   <svg class="" width="70px" height="70px"><use href="./images/icons.svg#icon-astronaut"></use></svg>
                
                 </div>
-              <h3 class="h-three-title">Современные технологии</h3>
+              <h3 class="peculiarities__title">Современные технологии</h3>
               <p>
-                <span class="text"
+                <span class="peculiarities__text"
                   >Значимость этих проблем настолько очевидна, что реализация плановых
                   заданий.</span>
               </p>
@@ -128,38 +130,38 @@
         </div>
       </section>
       <!--Чем занимаемся-->
-      <section class="section occupation">
-        <div class="container">
-          <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="occupation-item">
-            <li class="occupation-foto">
-              <div class="occupation-foto-div">
-              <img class="foto-block" src="./images/box1.jpg"  alt="img1" />
-              <p class="text-absolut"><span class="text-span-absolut">Десктопні додатки</span></p>
+      <section class="occupation">
+        <div class="occupation__container">
+          <h2 class="occupation__title">Чем мы занимаемся</h2>
+          <ul class="occupation__list">
+            <li class="occupation__item">
+              <div class="occupation__block">
+              <img class="occupation__img" src="./images/box1.jpg"  alt="img1" />
+              <p class="occupation__text"><span class="text-span-absolut">Десктопні додатки</span></p>
               </div>
             </li>
             
-            <li class="occupation-foto">
-              <div class="occupation-foto-div">
-              <img class="foto-block" src="./images/box2.jpg"  alt="img2" />
-              <p class="text-absolut"><span class="text-span-absolut">Мобільні додатки</span></p>
+            <li class="occupation__item">
+              <div class="occupation__block">
+              <img class="occupation__img" src="./images/box2.jpg"  alt="img2" />
+              <p class="occupation__text"><span class="text-span-absolut">Мобільні додатки</span></p>
               </div>
             </li>
-            <li class="occupation-foto">
-              <div class="occupation-foto-div">
-              <img class="foto-block" src="./images/box3.jpg"  alt="img3" />
-              <p class="text-absolut"><span class="text-span-absolut">Дизайнерські рішення</span></p>
+            <li class="occupation__item">
+              <div class="occupation__block">
+              <img class="occupation__img" src="./images/box3.jpg"  alt="img3" />
+              <p class="occupation__text"><span class="text-span-absolut">Дизайнерські рішення</span></p>
               </div>
             </li>
           </ul>
         </div>
       </section>
       <!--Наша команда-->
-      <section class="section team-section">
+      <section class="team-section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="site-team list">
-            <li class="team-section-items">
+            <li class="site-team__list">
               <div class="team-foto">
                 <img class="team-img" src="./images/project1.jpg" width="270" alt="Игорь_Демьяненко" />
                 <div class="foto-box">
@@ -215,18 +217,23 @@
                   <span class="position">Marketing</span>
                 </p>
                   <ul class="team-list list">
-                  <li><a class="team-link link" href="">
+                  <li>
+                    <a class="team-link link" href="">
                     <svg class="team-link-icon" width="20px" height="20px"><use href="./images/icons.svg#icon-instagram"></use></svg>
                   </a></li>
-                  <li><a class="team-link link" href="">
+                  <li>
+                    <a class="team-link link" href="">
                     <svg class="team-link-icon" width="20px" height="20px"><use href="./images/icons.svg#icon-twitter"></use></svg>
                   </a></li>
-                  <li><a class="team-link link" href="">
+                  <li>
+                    <a class="team-link link" href="">
                     <svg class="team-link-icon" width="20px" height="20px"><use href="./images/icons.svg#icon-facebook"></use></svg>
                   </a></li>
-                  <li><a class="team-link link" href="">
+                  <li>
+                    <a class="team-link link" href="">
                     <svg class="team-link-icon" width="20px" height="20px"><use href="./images/icons.svg#icon-linkedin"></use></svg>
-                  </a></li>
+                  </a>
+                </li>
                 </ul>
                 </div>
               </div>

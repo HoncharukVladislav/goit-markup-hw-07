@@ -4,14 +4,13 @@
   --second-text-color: #212121;
 }
 
-.header-porfolio {
+.header {
   background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid #ECECEC;
 }
-
-.container.header-flex {
+.header .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,12 +24,10 @@
   height: 80px;
 }
 
-.site-nav {
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
-  margin-left: 93px;
 }
 
 .site-nav .link {
@@ -41,38 +38,24 @@
   letter-spacing: 0.02em;
 }
 
-.site-nav .nav-link:hover,
-.site-nav .nav-link:focus {
-  color: var(--active-hover-color);
-}
-
-.nav-link:hover {
-  opacity: 1;
-}
-
-.nav-link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  -webkit-transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav__link:hover, .site-nav__link:focus {
+  color: #2196F3;
 }
 
-.phone-svg {
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-right: 10px;
-  fill: #757575;
-}
-
-.mail-svg {
-  fill: #757575;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  margin-left: 93px;
 }
 
 .site-contact {
@@ -82,31 +65,7 @@
   gap: 50px;
 }
 
-.contact-link:hover .mail-svg {
-  fill: #2196F3;
-}
-
-.contact-link:hover .phone-svg {
-  fill: #2196F3;
-}
-
-.contact-link:focus .phone-svg {
-  fill: #2196F3;
-}
-
-.contact-link:focus .mail-svg {
-  fill: #2196F3;
-}
-
-.contact-link:hover {
-  color: #2196F3;
-}
-
-.contact-link:focus {
-  color: #2196F3;
-}
-
-.contact-link {
+.site-contact__link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -124,16 +83,39 @@
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.section.occupation {
-  padding-top: 0px;
+.site-contact__link:hover .header__phone-svg {
+  fill: #2196F3;
+}
+.site-contact__link:focus .header__phone-svg {
+  fill: #2196F3;
+}
+.site-contact__link:focus .header__mail-svg {
+  fill: #2196F3;
+}
+.site-contact__link:hover .header__mail-svg {
+  fill: #2196F3;
+}
+.site-contact__link:hover {
+  color: #2196F3;
+}
+.site-contact__link:focus {
+  color: #2196F3;
 }
 
-.occupation-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
+.header__phone-svg {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.header__mail-svg {
+  fill: #757575;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
 }
 
 ul {
@@ -167,6 +149,10 @@ h6 {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -195,18 +181,7 @@ h6 {
   margin-right: auto;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.hero-title {
+.hero__title {
   margin: auto;
   color: #ffffff;
   font-weight: 900;
@@ -217,7 +192,7 @@ h6 {
   width: 696px;
 }
 
-.h-three-title {
+.peculiarities__title {
   color: #212121;
   font-weight: 700;
   font-size: 14px;
@@ -228,7 +203,7 @@ h6 {
   min-width: 270px;
 }
 
-.section-title {
+.occupation__title {
   color: var(--second-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -249,7 +224,17 @@ h6 {
   color: #212121;
 }
 
-.text {
+.section-title {
+  color: var(--second-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.peculiarities__text {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -282,7 +267,7 @@ h6 {
   border-bottom: 1px solid #2196F3;
 }
 
-.text-absolut {
+.occupation__text {
   bottom: 0;
   position: absolute;
   display: -webkit-box;
@@ -363,7 +348,11 @@ h6 {
   background-color: #2196F3;
 }
 
-.studia::before {
+.footer-text {
+  color: #FFFFFF;
+}
+
+.header__studia::before {
   background: #2196F3;
   content: "";
   position: absolute;
@@ -378,7 +367,7 @@ h6 {
   transition: opacity 250ms;
 }
 
-.portfolio::before {
+.site-nav__border::before {
   content: "";
   position: absolute;
   display: block;
@@ -393,7 +382,7 @@ h6 {
   transition: opacity 250ms;
 }
 
-.hero-button {
+.hero__button {
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
@@ -436,14 +425,12 @@ h6 {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav-button:hover {
   background-color: var(--active-hover-color);
   color: #FFFFFF;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 .nav-button:focus {
   background-color: var(--active-hover-color);
   color: #FFFFFF;
@@ -515,9 +502,7 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-
-.submit-button:focus,
-.submit-button:hover {
+.submit-button:focus, .submit-button:hover {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -537,7 +522,7 @@ h6 {
   cursor: pointer;
 }
 
-.logo-web {
+.header__logo-web {
   color: #2196F3;
   font-family: "Raleway";
   font-weight: 700;
@@ -546,18 +531,13 @@ h6 {
   letter-spacing: 0.03em;
 }
 
-.logo-studio {
+.header__logo-studio {
   color: #000000;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.header-logo:hover,
-.header-logo:focus {
-  color: var(--active-hover-color);
 }
 
 .footer-logo {
@@ -569,8 +549,7 @@ h6 {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-
-.footer_logo:focus {
+.footer-logo:focus {
   color: var(--active-hover-color);
 }
 
@@ -579,37 +558,29 @@ h6 {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.clients-link:hover .clients-item-logo {
+.clients-item-logo:hover .clients-item-logo {
+  fill: #2196F3;
+}
+.clients-item-logo:focus .clients-item-logo {
   fill: #2196F3;
 }
 
-.clients-link:focus .clients-item-logo {
-  fill: #2196F3;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.hero {
-  background-color: rgba(47, 48, 58, 0.4);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 200px 0px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+.team-box {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  border: 1px solid #EEEEEE;
+  border-top: transparent;
 }
 
-.peculiarities-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.team-box-div {
+  position: relative;
+  overflow: hidden;
 }
 
 .team-ul {
@@ -621,26 +592,13 @@ h6 {
   gap: 30px;
 }
 
-.peculiarities-iteam-icon {
-  background: #F5F4FA;
-  border-radius: 4px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 120px;
+.team-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-}
-
-.occupation-foto-div {
-  display: block;
-  position: relative;
-  background: rgba(47, 48, 58, 0.8);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .foto-block {
@@ -648,29 +606,6 @@ h6 {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.team-section {
-  background-color: #F5F4FA;
-}
-
-.site-team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.team-foto {
-  background-color: #ffffff;
-  width: 270px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .team-foto-portfolio {
@@ -697,139 +632,6 @@ h6 {
 .team-foto-portfolio:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.team-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.foto-box {
-  padding-top: 30px;
-  text-align: center;
-  padding-bottom: 30px;
-  width: 270px;
-}
-
-.team-list {
-  margin-top: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-}
-
-.team-link {
-  background-color: #FFFFFF;
-  fill: #AFB1B8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-link-icon {
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-link:focus {
-  background-color: #2196F3;
-}
-
-.team-link:hover {
-  background-color: #2196F3;
-}
-
-.team-link:hover .team-link-icon {
-  fill: #FFFFFF;
-}
-
-.team-link:focus .team-link-icon {
-  fill: #FFFFFF;
-}
-
-.clients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.clients-link {
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 170px;
-  height: 92px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-item-logo {
-  fill: #AFB1B8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-link:hover {
-  border-color: #2196F3;
-}
-
-.clients-link:focus {
-  border-color: #2196F3;
-}
-
-.clients-link:hover .clients-item-logo {
-  fill: #2196F3;
-}
-
-.clients-link:focus .clients-item-logo {
-  fill: #2196F3;
-}
-
-.team-box {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-bottom: 20px;
-  border: 1px solid #EEEEEE;
-  border-top: transparent;
-}
-
-.team-box-div {
-  position: relative;
-  overflow: hidden;
-}
-
-.team-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
 }
 
 .backdrop {
@@ -897,11 +699,6 @@ h6 {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
-}
-
-.form-fild,
-.commnet-margin {
-  margin-bottom: 20px;
 }
 
 .form-imput {
@@ -1082,10 +879,6 @@ h6 {
   gap: 12px;
 }
 
-textarea {
-  resize: none;
-}
-
 .footer {
   background-color: #2F303A;
   padding-top: 60px;
@@ -1107,23 +900,20 @@ textarea {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.footer-link:focus {
+  color: var(--active-hover-color);
+}
 
 .footer-contacts {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-link:focus {
+.footer-contacts:hover, .footer-contacts:focus {
   color: var(--active-hover-color);
 }
 
 address {
   font-style: normal;
-}
-
-.footer-contacts:hover,
-.footer-contacts:focus {
-  color: var(--active-hover-color);
 }
 
 .footer-submit {
@@ -1141,10 +931,6 @@ address {
 
 .footer-nav-li:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.footer-text {
-  color: #FFFFFF;
 }
 
 .team-link.footer-icons {
@@ -1214,6 +1000,207 @@ address {
 
 .footer-mail-svg {
   margin-left: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero {
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.peculiarities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.peculiarities__icon {
+  background: #F5F4FA;
+  border-radius: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.occupation__block {
+  display: block;
+  position: relative;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.occupation__img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.occupation- {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+
+.occupation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.occupation__container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-section {
+  background-color: #F5F4FA;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.site-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.team-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.foto-box {
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  width: 270px;
+}
+
+.team-foto {
+  background-color: #ffffff;
+  width: 270px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.team-link {
+  background-color: #FFFFFF;
+  fill: #AFB1B8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-link:focus {
+  background-color: #2196F3;
+}
+.team-link:hover {
+  background-color: #2196F3;
+}
+.team-link:hover .team-link-icon {
+  fill: #FFFFFF;
+}
+.team-link:focus .team-link-icon {
+  fill: #FFFFFF;
+}
+
+.team-link-icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.clients-link {
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-link:hover {
+  border-color: #2196F3;
+}
+.clients-link:focus {
+  border-color: #2196F3;
+}
+.clients-link:hover .clients-item-logo {
+  fill: #2196F3;
+}
+.clients-link:focus .clients-item-logo {
+  fill: #2196F3;
+}
+
+.clients-item-logo {
+  fill: #AFB1B8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }/*# sourceMappingURL=main.css.map */

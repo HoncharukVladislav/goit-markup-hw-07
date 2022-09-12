@@ -1,4 +1,4 @@
-.studia::before {
+.header__studia::before {
     background: #2196F3;
     content: "";
     position: absolute;
@@ -11,7 +11,7 @@
     transition: opacity 250ms;
 }
 
-.portfolio::before {
+.site-nav__border::before {
     content: "";
     position: absolute;
     display: block;

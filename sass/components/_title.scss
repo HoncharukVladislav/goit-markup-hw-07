@@ -1,4 +1,4 @@
-.hero-title {
+.hero__title {
     margin: auto;
     color: #ffffff;
     font-weight: 900;
@@ -8,7 +8,7 @@
     text-transform: uppercase;
     width: 696px;
 }
-.h-three-title {
+.peculiarities__title {
     color: #212121;
     font-weight: 700;
     font-size: 14px;
@@ -18,7 +18,7 @@
     margin-bottom: 10px;
     min-width: 270px;
 }
-.section-title {
+.occupation__title {
     color: var(--second-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -38,3 +38,12 @@
     margin-bottom: 12px;
     color: #212121;
 }
+
+.section-title {
+    color: var(--second-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;}
